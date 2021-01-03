@@ -1,8 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NavBar from "./components/navBar";
 import Deposit from "./components/deposit";
+import Login from "./components/login";
+import NotFound from "./components/notFound";
 import Toast from "./components/common/toast";
 import config from "./config.json";
 import Utils from "./utils/index";
@@ -47,9 +50,14 @@ function App(props) {
         </header>
         <div className="container">
           <div className="py-3">
-            <Deposit />
+            <Switch>
+              <Route exact path="/" component={Deposit} />
+              <Route path="/login" component={Login} />
+              <Route path="*" component={NotFound} />
+            </Switch>
           </div>
         </div>
+
         <ToastContainer
           position="bottom-right"
           autoClose={false}

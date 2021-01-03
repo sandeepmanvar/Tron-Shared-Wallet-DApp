@@ -1,10 +1,13 @@
 import React, { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 
 function NavBar(props) {
   return (
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <span className="navbar-brand">Shared Wallet App</span>
+        <NavLink to="/" className="navbar-brand">
+          Shared Wallet App
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,14 +22,12 @@ function NavBar(props) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active mr-2">
-              <button className="nav-link btn btn-primary text-white">
+              <NavLink
+                to="/login"
+                className="nav-link btn btn-primary text-white"
+              >
                 <i className="fas fa-sign-in-alt"></i>&nbsp;Login
-              </button>
-            </li>
-            <li className="nav-item active">
-              <button className="nav-link btn btn-danger text-white">
-                <i className="fas fa-sign-out-alt"></i>&nbsp;Logout
-              </button>
+              </NavLink>
             </li>
           </ul>
         </div>
