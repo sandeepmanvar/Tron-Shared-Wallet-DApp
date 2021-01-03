@@ -40,7 +40,7 @@ function App(props) {
     setupContract();
   }, [tronWeb, contract]);
   return (
-    <AppContext.Provider value={{ tronWeb, contract }}>
+    <AppContext.Provider value={{ tronWeb, contract, toast }}>
       <Fragment>
         <header className="App-header">
           <NavBar />
@@ -54,8 +54,8 @@ function App(props) {
           position="bottom-right"
           autoClose={false}
           newestOnTop
-          closeButton={false}
-          closeOnClick={false}
+          closeButton={true}
+          closeOnClick={true}
           rtl={false}
           pauseOnFocusLoss
           draggable={false}

@@ -4,9 +4,7 @@ function NavBar(props) {
   return (
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">
-          Shared Wallet App
-        </a>
+        <span className="navbar-brand">Shared Wallet App</span>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,14 +19,14 @@ function NavBar(props) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active mr-2">
-              <a className="nav-link btn btn-primary text-white" href="#">
-                <i class="fas fa-sign-in-alt"></i>&nbsp;Login
-              </a>
+              <button className="nav-link btn btn-primary text-white">
+                <i className="fas fa-sign-in-alt"></i>&nbsp;Login
+              </button>
             </li>
             <li className="nav-item active">
-              <a className="nav-link btn btn-danger text-white" href="#">
-                <i class="fas fa-sign-out-alt"></i>&nbsp;Logout
-              </a>
+              <button className="nav-link btn btn-danger text-white">
+                <i className="fas fa-sign-out-alt"></i>&nbsp;Logout
+              </button>
             </li>
           </ul>
         </div>
