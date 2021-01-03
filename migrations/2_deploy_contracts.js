@@ -1,5 +1,5 @@
-// var MyContract = artifacts.require("./MyContract.sol");
+var MyContract = artifacts.require("./SharedWallet.sol");
 
-module.exports = function(deployer) {
-  // deployer.deploy(MyContract);
+module.exports = function (deployer) {
+  deployer.deploy(MyContract);
 };
